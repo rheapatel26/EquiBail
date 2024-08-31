@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    margin: 1%;
+    font-family: "Moderustic", sans-serif;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+h5 {
+    margin-top: -1vw;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+}
+
+li {
+    display: inline-block;
+    margin-right: 10%;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Navbar Styles */
+#navbar {
+    font-family: "Moderustic", sans-serif;
+    position: relative;
+    width: fit-content;
+    text-decoration: none;
+    margin: -4% auto 0;
+    /* border: black solid 2px; */
+    color: black;
+    width: 30vw;
+    text-align: center; /* Aligning navbar content to the right */
+}
+
+/* Button Container Styles */
+.button-container {
+    text-align: right; /* Spacing between navbar and buttons */
+    /* border: green solid 2px; */
+    width: 14vw;
+    margin-top: -6%;
+    /* position: relative; */
+    float:right;
+}
+
+#logo{
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-top: 1.5%;
+    margin-right: 1%;
+}
+#head-heading{
+    position: relative;
+    display: flex;
+    /* border: red solid 2px; */
+}
+
+.login-btn, .signup-btn {
+    border-radius: 0.6vw;
+    font-weight: bold; 
+    margin-left: 1rem; /* Spacing between buttons */
+    padding: 0.5rem 1rem; /* Padding for the buttons */
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 768px) {
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 1em;
+    }
+
+    ul {
+        font-size: medium;
+
+        float: right;   
+    }
+
+    li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    #navbar {
+        text-align: center;
+    }
+
+    .button-container {
+        text-align: center; /* Centering buttons on small screens */
+        margin-top: 1rem;
+    }
+
+    .login-btn, .signup-btn {
+        margin-left: 0; /* Remove left margin on small screens */
+        margin-bottom: 1rem; /* Spacing between buttons on small screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h3 {
+        font-size: 1.2em;
+    }
+
+    h5 {
+        font-size: 0.9em;
+    }
+
+    ul {
+        font-size: small;
+    }
+
+    li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    #navbar {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .button-container {
+        text-align: center; /* Centering buttons on small screens */
+        margin-top: 1rem;
+    }
+
+    .login-btn, .signup-btn {
+        width: 100%; /* Full width buttons on small screens */
+        border-radius: 0.5em;
+        padding: 10px;
+        margin-left: 0; /* Remove left margin on small screens */
+        margin-bottom: 0.5rem; /* Spacing between buttons on small screens */
+    }
+}
