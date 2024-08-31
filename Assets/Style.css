@@ -45,10 +45,35 @@ a {
 .button-container {
     text-align: right; /* Spacing between navbar and buttons */
     /* border: green solid 2px; */
-    width: 14vw;
+    width: 15vw;
     margin-top: -4%;
+    display: inline-block;
     /* position: relative; */
     float:right;
+    color: black;
+}
+/* Container for text */
+#gen-info {
+    font-family: monospace; /* Optional: gives a typewriter-like font */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflow text */
+    border-right: 0.15em solid transparent; /* Cursor effect */
+    margin-top: -50vw;
+    font-size: 4vw;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation-delay: 0s, 3.5s;
+}
+
+/* Typewriting animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Cursor blinking effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: transparent; }
 }
 
 #logo{
@@ -57,6 +82,9 @@ a {
     /* margin-top: 1%; */
     margin-right: 1%;
 }
+/* #head{
+    position: fixed;
+} */
 #head-heading{
     position: relative;
     display: flex;
@@ -69,6 +97,8 @@ a {
     font-weight: bold; 
     background-color: transparent;
     border: black 1px solid;
+    color: #000;
+    width: 6vw;
     margin-left: 1rem; /* Spacing between buttons */
     padding: 0.5rem 1rem; /* Padding for the buttons */
 }
@@ -78,6 +108,7 @@ a {
     opacity: 0.3;
     width: 100%;
     height: auto;
+    z-index: -1;
 }
 /* Media Queries for Responsiveness */
 @media only screen and (max-width: 768px) {
@@ -146,7 +177,7 @@ a {
     }
 
     .login-btn, .signup-btn {
-        width: 100%; /* Full width buttons on small screens */
+        width: 50%; /* Full width buttons on small screens */
         border-radius: 0.5em;
         border: black 0.3px solid;
         padding: 10px;
@@ -154,3 +185,129 @@ a {
         margin-bottom: 0.5rem; /* Spacing between buttons on small screens */
     }
 }
+
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  #login-adv {
+    background-color: rgba(201, 220, 255, 0.674);
+    color: black;
+    border-radius: 0.5rem;
+    font-size: larger;
+    font-weight: 500;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    font-family: "Moderustic", sans-serif;
+    position: absolute;
+    width: 100%;
+    z-index: 10000;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
