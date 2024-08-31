@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     margin: 1%;
     font-family: "Moderustic", sans-serif;
@@ -38,26 +38,23 @@ a {
     /* border: black solid 2px; */
     color: black;
     width: 30vw;
-    text-align: center; /* Aligning navbar content to the right */
+    text-align: center; 
 }
 
-/* Button Container Styles */
 .button-container {
-    text-align: right; /* Spacing between navbar and buttons */
+    text-align: right; 
     /* border: green solid 2px; */
     width: 15vw;
     margin-top: -4%;
     display: inline-block;
-    /* position: relative; */
     float:right;
     color: black;
 }
-/* Container for text */
 #gen-info {
-    font-family: monospace; /* Optional: gives a typewriter-like font */
-    white-space: nowrap; /* Prevent line breaks */
-    overflow: hidden; /* Hide overflow text */
-    border-right: 0.15em solid transparent; /* Cursor effect */
+    font-family: monospace; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    border-right: 0.15em solid transparent; 
     margin-top: -50vw;
     font-size: 4vw;
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
