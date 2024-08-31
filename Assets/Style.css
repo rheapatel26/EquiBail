@@ -1,15 +1,16 @@
 
 body {
-    margin: 1%;
     font-family: "Moderustic", sans-serif;
 }
 
-h3 {
+h1 {
     font-weight: bold;
+    color: white;
 }
 
 h5 {
     margin-top: -1vw;
+    color: white;
 }
 
 ul {
@@ -32,11 +33,11 @@ a {
 #navbar {
     font-family: "Moderustic", sans-serif;
     position: relative;
-    width: fit-content;
+    width: 50vw;
     text-decoration: none;
     margin: -3.5% auto 0;
-    /* border: black solid 2px; */
-    color: black;
+    border: gray solid 2px;
+    color: white;
     width: 30vw;
     text-align: center; 
 }
@@ -44,10 +45,9 @@ a {
 .button-container {
     text-align: right; 
     /* border: green solid 2px; */
-    width: 15vw;
-    margin-top: -4%;
-    display: inline-block;
-    float:right;
+    width: fit-content;
+    align-content: center;
+    margin-top: 80%;
     color: black;
 }
 #gen-info {
@@ -74,17 +74,25 @@ a {
 }
 
 #logo{
-    width: 2.5vw;
-    height: 2.5vw;
-    /* margin-top: 1%; */
+    width: 5vw;
+    height: 8vw;
+    margin-top: -1%;
     margin-right: 1%;
 }
-/* #head{
-    position: fixed;
-} */
+#head{
+    width: 52vw;
+    height: 52vw;
+    /* border: red solid 1px; */
+    float:right;
+    margin-top: -1vw;
+    position: absolute;
+    margin-left: 48vw;
+    background-color: #1b1b1b;
+}
 #head-heading{
     position: relative;
     display: flex;
+    margin-left: 35%;
     /* border: red solid 2px;   */
     height: 4vw;
 }
@@ -93,8 +101,8 @@ a {
     border-radius: 0.6vw;
     font-weight: bold; 
     background-color: transparent;
-    border: black 1px solid;
-    color: #000;
+    border: whitesmoke 1px solid;
+    color: white;
     width: 6vw;
     margin-left: 1rem; /* Spacing between buttons */
     padding: 0.5rem 1rem; /* Padding for the buttons */
@@ -102,10 +110,14 @@ a {
 
 
 #bg-vid{
-    opacity: 0.3;
+    opacity: 1;
     width: 100%;
-    height: auto;
+    height: 40vw;
+    margin-top: -25vw;
     z-index: -1;
+    transform: rotate(90deg);
+            transform-origin: center;
+            object-fit: cover;
 }
 /* Media Queries for Responsiveness */
 @media only screen and (max-width: 768px) {
@@ -186,8 +198,9 @@ a {
 
 
 input[type=text], input[type=password] {
-    width: 100%;
+    width: 20vw;
     padding: 12px 20px;
+    border-radius: 0.5rem;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -196,8 +209,8 @@ input[type=text], input[type=password] {
   
   /* Set a style for all buttons */
   #login-adv {
-    background-color: rgba(201, 220, 255, 0.674);
-    color: black;
+    /* background-color: rgba(201, 220, 255, 0.674); */
+    background-color: transparent;
     border-radius: 0.5rem;
     font-size: larger;
     font-weight: 500;
@@ -206,7 +219,7 @@ input[type=text], input[type=password] {
     border: none;
     cursor: pointer;
     font-family: "Moderustic", sans-serif;
-    position: absolute;
+    position: relative;
     width: 100%;
     z-index: 10000;
   }
@@ -219,21 +232,10 @@ input[type=text], input[type=password] {
   .cancelbtn {
     width: auto;
     padding: 10px 18px;
-    background-color: #f44336;
+    background-color: transparent;
   }
   
-  /* Center the image and position the close button */
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-  }
-  
-  img.avatar {
-    width: 40%;
-    border-radius: 50%;
-  }
-  
+
   .container {
     padding: 16px;
   }
@@ -244,6 +246,20 @@ input[type=text], input[type=password] {
   }
   
   /* The Modal (background) */
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    width: 30vw; /* Set width to be narrower */
+    height: 55vh; /* Set height to create a vertical rectangle */
+    margin: -10% auto; /* Center horizontally with 5% top and bottom margin */
+    border: 1px solid #888;
+    border-radius: 0.5rem; /* Optional: add border radius for rounded corners */
+    position: relative;
+    padding: 20px; /* Add padding inside the modal */
+    box-sizing: border-box; /* Ensure padding is included in the width and height */
+  }
+  
+  /* Adjust modal position for vertical centering */
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -255,15 +271,15 @@ input[type=text], input[type=password] {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
+    padding-top: 20%; /* Adjust top padding to vertically center the modal */
   }
   
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  .lawyer-login-btn{
+    width: 5vw;
+    height: 3vw;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 0.5rem;
+    background-color: transparent;
   }
   
   /* The Close Button (x) */
@@ -278,7 +294,6 @@ input[type=text], input[type=password] {
   
   .close:hover,
   .close:focus {
-    color: red;
     cursor: pointer;
   }
   

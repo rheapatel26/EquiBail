@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,63 +10,88 @@
     <link rel="stylesheet" href="Assets/Style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="head">
         <div id="head-heading">
-            <img src="Assets/Images/logo-removebg-preview.png" alt="Logo" id="logo">
-            <div style="margin-top: -1.5%;">
-                <h3>EQUIBAIL</h3>
+            <img src="Assets/Images/logos (2).png" alt="Logo" id="logo">
+            <div style="margin-top: -1%;">
+                <h1>EQUIBAIL</h1>
                 <h5>Fast, Accurate, and Reliable.</h5>
             </div>
         </div>
         <div class="button-container">
-            <a href="https://www.google.com"><button class="login-btn">Login</button></a>
-            <a href="https://www.google.com"><button class="signup-btn">Sign Up</button></a> 
+            <a href="https://www.instagram.com"><button class="login-btn" >Sign Up</button></a>
         </div>
-        <div id="navbar">
-            <ul>
-                <li><h5><a href="#home">Home</a></h5></li>
-                <li><h5><a href="#news">News</a></h5></li>
-                <li><h5><a href="#contact">Contact</a></h5></li>
-                <li><h5><a href="#about">About</a></h5></li>
+        <!-- <div id="navbar">
+            <ul>  
+                <li>
+                    <h5><a href="#home">Home</a></h5>
+                </li>
+                <li>
+                    <h5><a href="#news">News</a></h5>
+                </li>
+                <li>
+                    <h5><a href="#contact">Contact</a></h5>
+                </li>
+                <li>
+                    <h5><a href="#about">About</a></h5>
+                </li>
             </ul>
-        </div>
+        </div> -->
     </div>
-    <div id="login-div" style="width: auto; height: auto;">
-        <button onclick="document.getElementById('id01').style.display='block'" style="width:20vw;height:5vw;margin-left: 55vw; margin-top: 5vw;" id="login-adv">Login as Advocate</button>
-        <video src="Assets/Images/38660-418027274_small.mp4" autoplay id="bg-vid" muted loop ></video> 
+    <div id="login-div" style="width: 50%; height: 100vw;position: relative;">
+        <button onclick="document.getElementById('id01').style.display='block'"
+            style="width:20vw;height:5vw;margin-left: 66vw; margin-top: 10vw; color:white;border: white solid 1px;" id="login-adv">Login as Advocate</button>
+            <button onclick="document.getElementById('id02').style.display='block'"
+            style="width:20vw;height:5vw;margin-left: 66vw; margin-top: 2vw; color:white;border: white solid 1px;" id="login-adv">Login as Judge</button>
+            <button onclick="document.getElementById('id03').style.display='block'"
+            style="width:20vw;height:5vw;margin-left: 66vw; margin-top: 2vw; color:white;border: white solid 1px;" id="login-adv">Login as User</button>
+        <video src="Assets/Images/istockphoto-1445273391-640_adpp_is.mp4" autoplay id="bg-vid" muted loop></video>
     </div>
     <div id="gen-info"></div>
     <script src="Assets/main.js"></script>
+
+    <div id="id01" class="modal">
+        <form class="modal-content animate" id="loginForm">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
     
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" id="uname" placeholder="Enter Username" name="uname" required><br>
+    
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="psw" placeholder="Enter Password" name="psw" required><br><br>
+    
+                <button type="submit" class="lawyer-login-btn">Login</button><br><br>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+    
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
     </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
+    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+    
+            var username = document.getElementById('uname').value;
+            var password = document.getElementById('psw').value;
+    
+            if (username === 'lawyer1' && password === 'lawyer1') {
+                window.location.href = 'deashboard_lawyer.html'; // Redirect to a new page
+            } else {
+                alert('Invalid username or password'); // Show an error message
+            }
+        });
+    </script>
 </body>
+
 </html>
