@@ -68,6 +68,7 @@ a {
     border-radius: 0.6vw;
     font-weight: bold; 
     background-color: transparent;
+    border: black 1px solid;
     margin-left: 1rem; /* Spacing between buttons */
     padding: 0.5rem 1rem; /* Padding for the buttons */
 }
@@ -76,6 +77,7 @@ a {
 #bg-vid{
     opacity: 0.3;
     width: 100%;
+    height: auto;
 }
 /* Media Queries for Responsiveness */
 @media only screen and (max-width: 768px) {
@@ -146,6 +148,7 @@ a {
     .login-btn, .signup-btn {
         width: 100%; /* Full width buttons on small screens */
         border-radius: 0.5em;
+        border: black 0.3px solid;
         padding: 10px;
         margin-left: 0; /* Remove left margin on small screens */
         margin-bottom: 0.5rem; /* Spacing between buttons on small screens */
