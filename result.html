@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loader Example</title>
     <link rel="stylesheet" href="Assets/result.css">
+    <style>
+        /* Basic styles for the ring graphs and button */
+        .graph-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        canvas {
+            width: 150px;
+            height: 150px;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .pdf-link {
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pdf-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <div class="loader"></div>
@@ -12,7 +41,15 @@
         <!-- Content of the result page -->
         <h1>Report Generated!</h1>
         <p>Your report has been successfully generated.</p>
+        <div class="graph-container">
+            <canvas id="bailPercentageChart"></canvas>
+            <canvas id="riskReattemptChart"></canvas>
+        </div>
+        <div class="button-container">
+            <a href="Assets/sample-report.pdf" class="pdf-link" download>Download Detailed Report</a>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="Assets/main.js"></script>
 </body>
 </html>
