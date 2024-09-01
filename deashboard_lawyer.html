@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Lawyer Dashboard</title>
+    <link rel="stylesheet" href="Assets/dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Lawyer Dashboard</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <h2>Profile</h2>
+                <p>Account Name</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Case List</a></li>
+                    <li><a href="#">Client List</a></li>
+                    <li><a href="#">Document Management</a></li>
+                    <li><a href="#">Report History</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="overview">
+                <div class="summary-card">Total Cases: <br><span id="total-cases">25</span></div>
+                <div class="summary-card">Ongoing Cases: <span id="ongoing-cases">10</span></div>
+                <div class="summary-card">Pending Reports: <span id="pending-reports">5</span></div>
+            </div>
+            <br><br>
+            <div class="button-group" >
+                <button class="btn">New Case</button>
+                <button class="btn">Modify Case</button>
+                <button class="btn">Past Cases</button>
+            </div>
+            <div class="card-container">
+                <section class="card">
+                    <h2 >Total Ongoing Cases</h2>
+                    <div class="graph">
+                        <canvas id="ongoing-cases-graph"></canvas>
+                    </div>
+                </section>
+                <section class="card">
+                    <h2 >Total Reports Generated</h2>
+                    <div class="graph">
+                        <canvas id="reports-generated-graph"></canvas>
+                    </div>
+                </section>
+                <section class="card">
+                    <h2>Upcoming Deadlines</h2>
+                    <div class="calendar">
+                        <!-- Calendar integration or task list -->
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Assets/scripts.js"></script>
+</body>
+</html>
