@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="details-container">
+        <h1>Client Details</h1>
+        <table id="clientTable">
+            <thead>
+                <tr>
+                    <th>Client ID</th>
+                    <th>Offences</th>
+                    <th>Sections Used</th>
+                    <th>Apply for Bail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+        <div class="pagination">
+            <button id="backToListBtn" class="nav-button">Back to Lawyers List</button>
+            <button id="prevPageBtn" class="nav-button">Previous</button>
+            <button id="nextPageBtn" class="nav-button">Next</button>
+        </div>
+    </div>
+
+    <script>
+        // Sample data for clients
+        const clients = [
+            { id: 1, offences: 'Theft', sections: 'Section 379', bail: 'Yes' },
+            { id: 2, offences: 'Assault', sections: 'Section 323', bail: 'No' },
+            { id: 3, offences: 'Fraud', sections: 'Section 420', bail: 'Yes' },
+            { id: 4, offences: 'Robbery', sections: 'Section 392', bail: 'Yes' },
+            { id: 5, offences: 'Murder', sections: 'Section 302', bail: 'No' },
+            { id: 6, offences: 'Kidnapping', sections: 'Section 364', bail: 'Yes' },
+            { id: 7, offences: 'Extortion', sections: 'Section 384', bail: 'Yes' },
+            { id: 8, offences: 'Rape', sections: 'Section 376', bail: 'No' },
+            { id: 9, offences: 'Dacoity', sections: 'Section 395', bail: 'No' },
+            { id: 10, offences: 'Burglary', sections: 'Section 457', bail: 'Yes' },
+            { id: 11, offences: 'Forgery', sections: 'Section 465', bail: 'Yes' },
+            { id: 12, offences: 'Arson', sections: 'Section 435', bail: 'Yes' },
+            { id: 13, offences: 'Cheating', sections: 'Section 420', bail: 'No' },
+            { id: 14, offences: 'Harassment', sections: 'Section 498A', bail: 'Yes' },
+            { id: 15, offences: 'Defamation', sections: 'Section 499', bail: 'Yes' },
+            { id: 16, offences: 'Public Disorder', sections: 'Section 144', bail: 'Yes' },
+            { id: 17, offences: 'Trespassing', sections: 'Section 447', bail: 'Yes' },
+            { id: 18, offences: 'Forgery', sections: 'Section 467', bail: 'No' },
+            { id: 19, offences: 'Riots', sections: 'Section 147', bail: 'Yes' },
+            { id: 20, offences: 'Intimidation', sections: 'Section 506', bail: 'Yes' }
+        ];
+
+        // Pagination variables
+        let currentPage = 1;
+        const rowsPerPage = 8;
+
+        function downloadClientDetails(client) {
+    // Create a string with the client's details
+    const content = `Client ID: ${client.id}\nOffences: ${client.offences}\nSections Used: ${client.sections}\nApply for Bail: ${client.bail}`;
+    
+    // Create a Blob from the string
+    const blob = new Blob([content], { type: 'text/plain' });
+
+    // Create a temporary anchor element
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `Client_${client.id}_Details.txt`; // Name of the downloaded file
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+        function renderTable() {
+            const tableBody = document.querySelector('#clientTable tbody');
+            tableBody.innerHTML = '';
+
+            // Calculate the start and end indices for current page
+            const startIndex = (currentPage - 1) * rowsPerPage;
+            const endIndex = startIndex + rowsPerPage;
+            const currentRows = clients.slice(startIndex, endIndex);
+
+            // Populate the table with data
+            currentRows.forEach(client => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${client.id}</td>
+                    <td>${client.offences}</td>
+                    <td>${client.sections}</td>
+                    <td>${client.bail}</td>
+                `;
+                row.addEventListener('click', () => {
+            downloadClientDetails(client);
+        });
+                tableBody.appendChild(row);
+            });
+
+            // Update button states
+            document.getElementById('prevPageBtn').disabled = currentPage === 1;
+            document.getElementById('nextPageBtn').disabled = endIndex >= clients.length;
+        }
+
+        document.getElementById('backToListBtn').addEventListener('click', () => {
+            window.location.href = 'dashboard.html'; // Redirect to the lawyers list
+        });
+
+        document.getElementById('prevPageBtn').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderTable();
+            }
+        });
+
+        document.getElementById('nextPageBtn').addEventListener('click', () => {
+            if (currentPage * rowsPerPage < clients.length) {
+                currentPage++;
+                renderTable();
+            }
+        });
+
+        // Initial table render
+        renderTable();
+    </script>
+</body>
+</html>
