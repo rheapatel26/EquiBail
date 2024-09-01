@@ -10,333 +10,300 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="head">
-        <div id="head-heading">
-            <img src="Assets/Images/logo-removebg-preview.png" alt="Logo" id="logo">
-            <div style="margin-top: -1.5%;">
-                <h3>EQUIBAIL</h3>
-                <h5>Fast, Accurate, and Reliable.</h5>
+    <header>
+        <h1>Lawyer Dashboard</h1>
+      </header>
+      <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <h2>Profile</h2>
+                <p>Account Name</p>
             </div>
-        </div>
-        <div class="button-container">
-            <a href="https://www.google.com"><button class="login-btn">Login</button></a>
-            <a href="https://www.google.com"><button class="signup-btn">Sign Up</button></a> 
-        </div>
-        <div id="navbar">
-            <ul>
-                <li><h5><a href="#home">Home</a></h5></li>
-                <li><h5><a href="#news">News</a></h5></li>
-                <li><h5><a href="#contact">Contact</a></h5></li>
-                <li><h5><a href="#about">About</a></h5></li>
-            </ul>
-        </div>
-    </div>
-    <div class="formbold-main-wrapper">
-      <!-- Author: FormBold Team -->
-      <!-- Learn More: https://formbold.com -->
-      <div class="formbold-form-wrapper">
-             <img id="formlogo" src="Assets\Images\formlogo.png">
-          <form>
-          <h1 id="header1">Defendant Form</h1>
-          <h1 id="header2">Accusation Details</h1>
-
-          <div class="formbold-input-wrapp formbold-mb-3">
-            <label for="firstname" class="formbold-form-label"> Names of Parties Invloved: </label>
-            <label for="firstname" class="formbold-form-label"> Defendant: </label>
-    
-            <div>
-              <input
-                type="text"
-                name="firstname"
-                id="firstname"
-                placeholder="Full Name"
-                class="formbold-form-input"
-              />
-              
-            </div>
-          </div>
-          <div class="formbold-input-wrapp formbold-mb-3">
-    
-            <div>
-              <input
-                type="text"
-                name="firstname"
-                id="firstname"
-                placeholder="Full Name"
-                class="formbold-form-input"
-              />
-              
-            </div>
-          </div>
-    
-          <div class="formbold-mb-3agedob">
-            <label for="age" class="formbold-form-labelfir"> FIR Number</label>
-            <input
-              type="text"
-              name="age"
-              id="age"
-              class="formbold-form-inputagedob"
-            />
-
-            <label for="dob" class="formbold-form-labelfir"> Date of filing </label>
-            <input type="date" name="dob" id="dob" class="formbold-form-inputagedob" />
-          </div>
-    
+            <nav>
+                <ul>
+                    <li><a href="#">Case List</a></li>
+                    <li><a href="#">Client List</a></li>
+                    <li><a href="#">Document Management</a></li>
+                    <li><a href="#">Report History</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="formbold-main-wrapper">
+                <div class="formbold-form-wrapper">
+                       <img id="formlogo" src="Assets\Images\formlogo.png">
+                    <form>
+                    <h1 id="header1">Defendant Form</h1>
+                    <h1 id="header2">Accusation Details</h1>
           
-    
-          <div class="formbold-mb-3">
-            <label class="formbold-form-label">Bail Type</label>
-    
-            <select class="formbold-form-input" name="occupation" id="occupation">
-              <option value="male">Regular Bail</option>
-              <option value="female">Anticipatory Bail</option>
-              <option value="others">Interim Bail</option>
-            </select>
-          </div>
-
-          <div class="formbold-checkbox-wrapper">
-            <label for="supportCheckbox" class="formbold-checkbox-label">
-              <div class="formbold-relative">
-                <input
-                  type="checkbox"
-                  id="supportCheckbox"
-                  class="formbold-input-checkbox"
-                />
-                <div class="formbold-checkbox-inner">
-                  <span class="formbold-opacity-0">
-                    <svg
-                      width="11"
-                      height="8"
-                      viewBox="0 0 11 8"
-                      class="formbold-stroke-current"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.81868 0.688604L4.16688 5.4878L2.05598 3.29507C1.70417 2.92271 1.1569 2.96409 0.805082 3.29507C0.453266 3.66742 0.492357 4.24663 0.805082 4.61898L3.30689 7.18407C3.54143 7.43231 3.85416 7.55642 4.16688 7.55642C4.47961 7.55642 4.79233 7.43231 5.02688 7.18407L10.0696 2.05389C10.4214 1.68154 10.4214 1.10233 10.0696 0.729976C9.71776 0.357624 9.17049 0.357625 8.81868 0.688604Z"
-                        fill="white"
+                    <div class="formbold-input-wrapp formbold-mb-3">
+                      <label for="firstname" class="formbold-form-label"> Names of Parties Invloved: </label>
+                      <label for="firstname" class="formbold-form-label"> Defendant: </label>
+              
+                      <div>
+                        <input
+                          type="text"
+                          name="firstname"
+                          id="firstname"
+                          placeholder="Full Name"
+                          class="formbold-form-input"
+                        />
+                        
+                      </div>
+                    </div>
+                    <div class="formbold-input-wrapp formbold-mb-3">
+              
+                      <div>
+                        <input
+                          type="text"
+                          name="firstname"
+                          id="firstname"
+                          placeholder="Full Name"
+                          class="formbold-form-input"
+                        />
+                        
+                      </div>
+                    </div>
+              
+                    <div class="formbold-mb-3agedob">
+                      <label for="age" class="formbold-form-labelfir"> FIR Number</label>
+                      <input
+                        type="text"
+                        name="age"
+                        id="age"
+                        class="formbold-form-inputagedob"
                       />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-              First Time Imprisonment
-            </label>
-          </div>
-    
           
-
-          <div class="formbold-mb-3">
-            <label for="email" class="formbold-form-label"> Police Station of FIR Registration </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="formbold-form-input"
-            />
-          </div>
-    
-          <div class="formbold-mb-3">
-            <label for="address" class="formbold-form-label"> Past Criminal Records (Leave Blank If None) </label>
-    
-            <input
-              type="text"
-              name="address1"
-              id="address1"
-              class="formbold-form-input formbold-mb-3"
-            />
-            <input
-              type="text"
-              name="address2"
-              id="address2"
-              class="formbold-form-input"
-            />
-            <label for="address" class="formbold-form-label"> Add + </label>
-          </div>
-
-        
-          <label for="address" class="formbold-form-label"> Time Spent In Custody </label>
-          <div class="formbold-mb-3agedob">
-            <label for="age" class="formbold-form-labelcustody"> Start</label>
-            <input type="date" name="dob" id="dob" class="formbold-form-inputagecustody" />
-
-
-            <label for="dob" class="formbold-form-labelcustody"> Till </label>
-            <input type="date" name="dob" id="dob" class="formbold-form-inputagecustody" />
-          </div>
+                      <label for="dob" class="formbold-form-labelfir"> Date of filing </label>
+                      <input type="date" name="dob" id="dob" class="formbold-form-inputagedob" />
+                    </div>
+              
+                    
+              
+                    <div class="formbold-mb-3">
+                      <label class="formbold-form-label">Bail Type</label>
+              
+                      <select class="formbold-form-input" name="occupation" id="occupation">
+                        <option value="male">Regular Bail</option>
+                        <option value="female">Anticipatory Bail</option>
+                        <option value="others">Interim Bail</option>
+                      </select>
+                    </div>
           
-          <label for="post" class="formbold-form-label"> Sections Invoked on Defendant </label>
-          <div class="formbold-input-flex">
-            <div>
-              <label for="post" class="formbold-form-label"> Criminal Code / Act </label>
-              <input
-                type="text"
-                name="post"
-                id="post"
-                class="formbold-form-input"
-              />
-            </div>
-            
-            <div>
-              <label for="city" class="formbold-form-label"> Section </label>
-              <input
-                type="text"
-                name="city"
-                id="city"
-                class="formbold-form-input"
-              />
-            </div>
-            
-          </div>
-          <div class="formbold-input-flex">
-            <div>
-              <input
-                type="text"
-                name="post"
-                id="post"
-                class="formbold-form-input"
-              />
-            </div>
-            
-            <div>
-              <input
-                type="text"
-                name="city"
-                id="city"
-                class="formbold-form-input"
-              />
-            </div>
-            
-          </div>
-          <label for="address" class="formbold-form-label"> Add + </label>
-
-          <div class="formbold-mb-3 formbold-input-wrapp">
-            <label for="phone" class="formbold-form-label"> Grounds for Bail </label>
-    
-            <div>
+                    <div class="formbold-checkbox-wrapper">
+                      <label for="supportCheckbox" class="formbold-checkbox-label">
+                        <div class="formbold-relative">
+                          <input
+                            type="checkbox"
+                            id="supportCheckbox"
+                            class="formbold-input-checkbox"
+                          />
+                          <div class="formbold-checkbox-inner">
+                            <span class="formbold-opacity-0">
+                              <svg
+                                width="11"
+                                height="8"
+                                viewBox="0 0 11 8"
+                                class="formbold-stroke-current"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M8.81868 0.688604L4.16688 5.4878L2.05598 3.29507C1.70417 2.92271 1.1569 2.96409 0.805082 3.29507C0.453266 3.66742 0.492357 4.24663 0.805082 4.61898L3.30689 7.18407C3.54143 7.43231 3.85416 7.55642 4.16688 7.55642C4.47961 7.55642 4.79233 7.43231 5.02688 7.18407L10.0696 2.05389C10.4214 1.68154 10.4214 1.10233 10.0696 0.729976C9.71776 0.357624 9.17049 0.357625 8.81868 0.688604Z"
+                                  fill="white"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                        First Time Imprisonment
+                      </label>
+                    </div>
+              
+                    
+          
+                    <div class="formbold-mb-3">
+                      <label for="email" class="formbold-form-label"> Police Station of FIR Registration </label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="formbold-form-input"
+                      />
+                    </div>
+              
+                    <div class="formbold-mb-3">
+                      <label for="address" class="formbold-form-label"> Past Criminal Records (Leave Blank If None) </label>
+              
+                      <input
+                        type="text"
+                        name="address1"
+                        id="address1"
+                        class="formbold-form-input formbold-mb-3"
+                      />
+                      <input
+                        type="text"
+                        name="address2"
+                        id="address2"
+                        class="formbold-form-input"
+                      />
+                      <label for="address" class="formbold-form-label"> Add + </label>
+                    </div>
+          
                   
-              <input
-                type="text"
-                name="phone"
-                id="phone"
-                class="formbold-form-input"
-              />
-            </div>
-          </div>
-
-          <div class="formbold-checkbox-wrapper">
-            <label for="supportCheckbox" class="formbold-checkbox-label">
-              <div class="formbold-relative">
-                <input
-                  type="checkbox"
-                  id="supportCheckbox"
-                  class="formbold-input-checkbox"
-                />
-                <div class="formbold-checkbox-inner">
-                  <span class="formbold-opacity-0">
-                    <svg
-                      width="11"
-                      height="8"
-                      viewBox="0 0 11 8"
-                      class="formbold-stroke-current"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.81868 0.688604L4.16688 5.4878L2.05598 3.29507C1.70417 2.92271 1.1569 2.96409 0.805082 3.29507C0.453266 3.66742 0.492357 4.24663 0.805082 4.61898L3.30689 7.18407C3.54143 7.43231 3.85416 7.55642 4.16688 7.55642C4.47961 7.55642 4.79233 7.43231 5.02688 7.18407L10.0696 2.05389C10.4214 1.68154 10.4214 1.10233 10.0696 0.729976C9.71776 0.357624 9.17049 0.357625 8.81868 0.688604Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-              Existence of Sufficient Evidence
-            </label>
-          </div>
-          <div class="formbold-mb-3">
-            <label for="address" class="formbold-form-label"> Evidence (Leave Blank If None) </label>
-    
-            <input
-              type="text"
-              name="address1"
-              id="address1"
-              class="formbold-form-input formbold-mb-3"
-            />
-            <input
-              type="text"
-              name="address2"
-              id="address2"
-              class="formbold-form-input"
-            />
-            <label for="address" class="formbold-form-label"> Add + </label>
-          </div>
-
-          <div class="formbold-mb-3">
-            <label for="upload" class="formbold-form-label">
-              Upload Evidence
-            </label>
-            <input
-              type="file"
-              name="upload"
-              id="upload"
-              class="formbold-form-input formbold-form-file"
-            />
-          </div>
-    
-          <div class="formbold-checkbox-wrapper">
-            <label for="supportCheckbox" class="formbold-checkbox-label">
-              <div class="formbold-relative">
-                <input
-                  type="checkbox"
-                  id="supportCheckbox"
-                  class="formbold-input-checkbox"
-                />
-                <div class="formbold-checkbox-inner">
-                  <span class="formbold-opacity-0">
-                    <svg
-                      width="11"
-                      height="8"
-                      viewBox="0 0 11 8"
-                      class="formbold-stroke-current"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.81868 0.688604L4.16688 5.4878L2.05598 3.29507C1.70417 2.92271 1.1569 2.96409 0.805082 3.29507C0.453266 3.66742 0.492357 4.24663 0.805082 4.61898L3.30689 7.18407C3.54143 7.43231 3.85416 7.55642 4.16688 7.55642C4.47961 7.55642 4.79233 7.43231 5.02688 7.18407L10.0696 2.05389C10.4214 1.68154 10.4214 1.10233 10.0696 0.729976C9.71776 0.357624 9.17049 0.357625 8.81868 0.688604Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-              I agree to the defined
-              <a href="#"> terms, conditions, and policies</a>
-            </label>
-          </div>
-    
+                    <label for="address" class="formbold-form-label"> Time Spent In Custody </label>
+                    <div class="formbold-mb-3agedob">
+                      <label for="age" class="formbold-form-labelcustody"> Start</label>
+                      <input type="date" name="dob" id="dob" class="formbold-form-inputagecustody" />
           
-        </form>
-        <button class="formbold-btn" onclick="toggleVisibility()" >Submit</button>
-        <div id="loader-container">
-            <div class="bouncing-dots">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-        </div>
-        <script>
-            function toggleVisibility() {
-                var div = document.getElementById("loader-container");
-                if (div.style.display === "none") {
-                    div.style.display = "block";
-                } else {
-                    div.style.display = "none";
-                }
-            }
-        </script>
-      </div>
-
-    </div>
+          
+                      <label for="dob" class="formbold-form-labelcustody"> Till </label>
+                      <input type="date" name="dob" id="dob" class="formbold-form-inputagecustody" />
+                    </div>
+                    
+                    <label for="post" class="formbold-form-label"> Sections Invoked on Defendant </label>
+                    <div class="formbold-input-flex">
+                      <div>
+                        <label for="post" class="formbold-form-label"> Criminal Code / Act </label>
+                        <input
+                          type="text"
+                          name="post"
+                          id="post"
+                          class="formbold-form-input"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label for="city" class="formbold-form-label"> Section </label>
+                        <input
+                          type="text"
+                          name="city"
+                          id="city"
+                          class="formbold-form-input"
+                        />
+                      </div>
+                      
+                    </div>
+                    <div class="formbold-input-flex">
+                      <div>
+                        <input
+                          type="text"
+                          name="post"
+                          id="post"
+                          class="formbold-form-input"
+                        />
+                      </div>
+                      
+                      <div>
+                        <input
+                          type="text"
+                          name="city"
+                          id="city"
+                          class="formbold-form-input"
+                        />
+                      </div>
+                      
+                    </div>
+                    <label for="address" class="formbold-form-label"> Add + </label>
+          
+                    <div class="formbold-mb-3 formbold-input-wrapp">
+                      <label for="phone" class="formbold-form-label"> Grounds for Bail </label>
+              
+                      <div>
+                            
+                        <input
+                          type="text"
+                          name="phone"
+                          id="phone"
+                          class="formbold-form-input"
+                        />
+                      </div>
+                    </div>
+          
+                    <div class="formbold-checkbox-wrapper">
+                      <label for="supportCheckbox" class="formbold-checkbox-label">
+                        <div class="formbold-relative">
+                          <input
+                            type="checkbox"
+                            id="supportCheckbox"
+                            class="formbold-input-checkbox"
+                          />
+                          <div class="formbold-checkbox-inner">
+                            <span class="formbold-opacity-0">
+                              <svg
+                                width="11"
+                                height="8"
+                                viewBox="0 0 11 8"
+                                class="formbold-stroke-current"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M8.81868 0.688604L4.16688 5.4878L2.05598 3.29507C1.70417 2.92271 1.1569 2.96409 0.805082 3.29507C0.453266 3.66742 0.492357 4.24663 0.805082 4.61898L3.30689 7.18407C3.54143 7.43231 3.85416 7.55642 4.16688 7.55642C4.47961 7.55642 4.79233 7.43231 5.02688 7.18407L10.0696 2.05389C10.4214 1.68154 10.4214 1.10233 10.0696 0.729976C9.71776 0.357624 9.17049 0.357625 8.81868 0.688604Z"
+                                  fill="white"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                        Existence of Sufficient Evidence
+                      </label>
+                    </div>
+                    <div class="formbold-mb-3">
+                      <label for="address" class="formbold-form-label"> Evidence (Leave Blank If None) </label>
+              
+                      <input
+                        type="text"
+                        name="address1"
+                        id="address1"
+                        class="formbold-form-input formbold-mb-3"
+                      />
+                      <input
+                        type="text"
+                        name="address2"
+                        id="address2"
+                        class="formbold-form-input"
+                      />
+                      <label for="address" class="formbold-form-label"> Add + </label>
+                    </div>
+          
+                    <div class="formbold-mb-3">
+                      <label for="upload" class="formbold-form-label">
+                        Upload Evidence
+                      </label>
+                      <input
+                        type="file"
+                        name="upload"
+                        id="upload"
+                        class="formbold-form-input formbold-form-file"
+                      />
+                    </div>    
+                    
+                  </form>
+                  <button class="formbold-btn" onclick="toggleVisibility()" >Submit</button>
+                  <div id="loader-container">
+                      <div class="bouncing-dots">
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                          <div class="dot"></div>
+                      </div>
+                  </div>
+                  <script>
+                      function toggleVisibility() {
+                          var div = document.getElementById("loader-container");
+                          if (div.style.display === "none") {
+                              div.style.display = "block";
+                          } else {
+                              div.style.display = "none";
+                          }
+                      }
+                  </script>
+                </div>
+          
+              </div>  
+        </main>
+    
 
 </body>
 </html>
