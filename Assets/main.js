@@ -16,5 +16,13 @@ window.onclick = function (event) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        // Hide the loader
+        document.querySelector('.loader').classList.add('hidden');
+        // Show the result page
+        document.querySelector('.result').style.display = 'block';
+    }, 4000); // 3000 milliseconds = 3 seconds
+});
 
 

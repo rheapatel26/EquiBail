@@ -281,29 +281,20 @@
                     </div>    
                     
                   </form>
-                  <button class="formbold-btn" onclick="toggleVisibility()" >Submit</button>
-                  <div id="loader-container">
-                      <div class="bouncing-dots">
-                          <div class="dot"></div>
-                          <div class="dot"></div>
-                          <div class="dot"></div>
-                      </div>
-                  </div>
-                  <script>
-                      function toggleVisibility() {
-                          var div = document.getElementById("loader-container");
-                          if (div.style.display === "none") {
-                              div.style.display = "block";
-                          } else {
-                              div.style.display = "none";
-                          }
-                      }
-                  </script>
+                  <button class="formbold-btn" type="submit" onclick="handleSubmit()">Submit</button>
+                  
+                  
                 </div>
           
               </div>  
         </main>
-    
-
+        
+        <script>
+          function handleSubmit() {
+              event.preventDefault();
+              window.prompt("hello");
+              window.location.href = 'result.html';
+          }
+      </script>
 </body>
 </html>
