@@ -21,63 +21,44 @@
             </div>
         </div>
         <div class="button-container">
-            <a href="https://www.instagram.com"><button class="login-btn" >Sign Up</button></a>
+            <a href="https://www.instagram.com"><button class="login-btn">Sign Up</button></a>
         </div>
-        <!-- <div id="navbar">
-            <ul>  
-                <li>
-                    <h5><a href="#home">Home</a></h5>
-                </li>
-                <li>
-                    <h5><a href="#news">News</a></h5>
-                </li>
-                <li>
-                    <h5><a href="#contact">Contact</a></h5>
-                </li>
-                <li>
-                    <h5><a href="#about">About</a></h5>
-                </li>
-            </ul>
-        </div> -->
     </div>
+
     <div id="login-div" style="width: 50%; height: 100vw;position: relative;">
         <button onclick="document.getElementById('id01').style.display='block'"
             style="width:20vw;height:5vw;margin-left: 66vw; margin-top: 10vw; color:white;border: white solid 1px;" id="login-adv">Login as Advocate</button>
-            <button onclick="document.getElementById('id02').style.display='block'"
+        <button onclick="document.getElementById('id02').style.display='block'"
             style="width:20vw;height:5vw;margin-left: 66vw; margin-top: 2vw; color:white;border: white solid 1px;" id="login-adv">Login as Judge</button>
-            <button onclick="document.getElementById('id03').style.display='block'"
+        <button onclick="document.getElementById('id03').style.display='block'"
             style="width:20vw;height:5vw;margin-left: 66vw; margin-top: 2vw; color:white;border: white solid 1px;" id="login-adv">Login as User</button>
         <video src="Assets/Images/istockphoto-1445273391-640_adpp_is.mp4" autoplay id="bg-vid" muted loop></video>
     </div>
-    <div id="gen-info"></div>
-    <script src="Assets/main.js"></script>
 
+    <!-- Login for Advocate -->
     <div id="id01" class="modal">
         <form class="modal-content animate" id="loginForm">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>
-    
             <div class="container">
                 <label for="uname"><b>Username</b></label>
                 <input type="text" id="uname" placeholder="Enter Username" name="uname" required><br>
-    
                 <label for="psw"><b>Password</b></label>
                 <input type="password" id="psw" placeholder="Enter Password" name="psw" required><br><br>
-    
                 <button type="submit" class="lawyer-login-btn">Login</button><br><br>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
             </div>
-    
             <div class="container" style="background-color:#f1f1f1">
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                 <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
         </form>
     </div>
-    
+
+    <!-- Login for Judge -->
     <div id="id02" class="modal">
         <form class="modal-content animate" id="loginFormJudge">
             <div class="imgcontainer">
@@ -99,29 +80,64 @@
             </div>
         </form>
     </div>
+
+    <!-- Login for User -->
+    <div id="id03" class="modal">
+        <form class="modal-content animate" id="loginFormUser">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" id="uname-user" placeholder="Enter Username" name="uname" required><br>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="psw-user" placeholder="Enter Password" name="psw" required><br><br>
+                <button type="submit" class="user-login-btn">Login</button><br><br>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
     <script>
+        // Advocate login form
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
-    
+            event.preventDefault();
             var username = document.getElementById('uname').value;
             var password = document.getElementById('psw').value;
-    
             if (username === 'lawyer1' && password === 'lawyer1') {
-                window.location.href = 'deashboard_lawyer.html'; // Redirect to a new page
+                window.location.href = 'dashboard_lawyer.html';
             } else {
-                alert('Invalid username or password'); // Show an error message
+                alert('Invalid username or password');
             }
         });
+
+        // Judge login form
         document.getElementById('loginFormJudge').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
-    
+            event.preventDefault();
             var username = document.getElementById('uname-judge').value;
             var password = document.getElementById('psw-judge').value;
-    
             if (username === 'judge1' && password === 'judge1') {
-                window.location.href = './Judge/dashBoard.html'; // Redirect to a new page
+                window.location.href = './Judge/dashBoard.html';
             } else {
-                alert('Invalid username or password'); // Show an error message
+                alert('Invalid username or password');
+            }
+        });
+
+        // User login form
+        document.getElementById('loginFormUser').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('uname-user').value;
+            var password = document.getElementById('psw-user').value;
+            if (username === 'user1' && password === 'user1') {
+                window.location.href = './User/Chatbot.html';
+            } else {
+                alert('Invalid username or password');
             }
         });
     </script>
