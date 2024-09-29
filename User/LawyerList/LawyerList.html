@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyer Assistance Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="LawyerList.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="/User/Chatbot.html" class="nav-item">Nyaya.AI</a>
+        </div>
+        <div class="navbar-right">
+            <a href="./Analysis/UserAnalysisPage1.html" class="nav-item">Get your Report</a>
+            <a href="./LawyerList/LawyerList.html" class="nav-item">Bail Assistance</a>
+        </div>
+    </nav>
+    <div class="dashboard">
+        <h1>Lawyer Assistance Database</h1>
+        <table id="lawyerTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Registration</th>
+                    <th>License</th>
+                    <th>Years of Practice</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pagination Controls -->
+    <div class="pagination">
+        <button id="prevBtn" disabled>Previous</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <!-- Assistance Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to request assistance from <span id="lawyerName"></span>?</p>
+            <button id="confirmBtn" class="modal-button">Confirm</button>
+            <button id="cancelBtn" class="modal-button">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
